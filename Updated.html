@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>TBS Clan | Official Website</title>
+<link rel="icon" type="image/png" href="TBS Profile.png">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:radial-gradient(circle at top,#0a0a0a,#020202);
+color:white;
+text-align:center;
+}
+
+header{
+padding:40px;
+background:#050505;
+box-shadow:0 0 40px #0088ff55;
+}
+
+.logo{
+width:280px;
+filter:drop-shadow(0 0 15px #0088ff);
+}
+
+h1{
+margin-top:10px;
+font-size:40px;
+letter-spacing:3px;
+color:#00aaff;
+}
+
+nav{
+margin-top:25px;
+}
+
+nav button{
+background:transparent;
+border:2px solid #00aaff;
+color:#00aaff;
+padding:10px 25px;
+margin:10px;
+font-size:18px;
+cursor:pointer;
+border-radius:6px;
+transition:0.3s;
+}
+
+nav button:hover{
+background:#00aaff;
+color:black;
+box-shadow:0 0 15px #00aaff;
+}
+
+.page{
+display:none;
+padding:50px;
+}
+
+.active{
+display:block;
+}
+
+.sectiontitle{
+font-size:28px;
+margin-bottom:25px;
+color:#00aaff;
+}
+
+.card{
+background:#0d0d0d;
+margin:12px auto;
+padding:18px;
+width:320px;
+border-radius:10px;
+border:1px solid #0088ff44;
+box-shadow:0 0 12px #0088ff33;
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #0088ff;
+}
+
+.rank{
+font-size:14px;
+color:#00aaff;
+margin-bottom:5px;
+}
+
+.joinbtn{
+background:#0088ff;
+border:none;
+padding:15px 40px;
+font-size:20px;
+color:white;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.joinbtn:hover{
+background:#00aaff;
+box-shadow:0 0 20px #00aaff;
+transform:scale(1.08);
+}
+
+.aboutbox{
+max-width:600px;
+margin:auto;
+background:#0d0d0d;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 20px #0088ff33;
+}
+
+/* popup */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:#0d0d0d;
+padding:30px;
+border-radius:10px;
+width:350px;
+box-shadow:0 0 25px #0088ff;
+}
+
+.close{
+margin-top:20px;
+padding:10px 20px;
+background:#0088ff;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:6px;
+}
+
+</style>
+
+<script>
+
+function showPage(id){
+
+let pages=document.querySelectorAll(".page");
+
+pages.forEach(p=>{
+p.classList.remove("active");
+});
+
+document.getElementById(id).classList.add("active");
+
+}
+
+function openProfile(name, text){
+
+document.getElementById("popup-name").innerText=name;
+document.getElementById("popup-text").innerText=text;
+
+document.getElementById("profile-popup").style.display="flex";
+
+}
+
+function closePopup(){
+document.getElementById("profile-popup").style.display="none";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="TBS Profile.png" class="logo">
+
+<h1>TBS CLAN</h1>
+
+<nav>
+<button onclick="showPage('about')">ABOUT</button>
+<button onclick="showPage('members')">MEMBERS</button>
+<button onclick="showPage('join')">JOIN</button>
+</nav>
+
+</header>
+
+
+<div id="about" class="page active">
+
+<h2 class="sectiontitle">About Us</h2>
+
+<div class="aboutbox">
+<p>
+This is an Pro Gorilla Tag Clan! Where you can have a lot of Fun and meet new Friends!
+<br><br>
+We do Training every weekend!
+<br><br>
+Join Now!
+</p>
+</div>
+
+</div>
+
+
+
+<div id="members" class="page">
+
+<h2 class="sectiontitle">Main Founder</h2>
+
+<div class="card" onclick="openProfile('Z3RO','The Original Founder of TBS.')">
+<div class="rank">MAIN FOUNDER</div>
+Z3RO
+</div>
+
+
+<h2 class="sectiontitle">Founders</h2>
+
+<div class="card" onclick="openProfile('Inferno','The Other 2 Founders, The Best ones on Earth!')">
+<div class="rank">FOUNDER</div>
+Inferno
+</div>
+
+<div class="card" onclick="openProfile('Paul','The Other 2 Founders, The Best ones on Earth!')">
+<div class="rank">FOUNDER</div>
+Paul
+</div>
+
+
+<h2 class="sectiontitle">Members</h2>
+
+<div class="card" onclick="openProfile('WaWa','The Best members on Earth!')">WaWa</div>
+<div class="card" onclick="openProfile('Mason','The Best members on Earth!')">Mason</div>
+<div class="card" onclick="openProfile('Mitzi','The Best members on Earth!')">Mitzi</div>
+<div class="card" onclick="openProfile('Ninja','The Best members on Earth!')">Ninja</div>
+<div class="card" onclick="openProfile('Zyphor','The Best members on Earth!')">Zyphor</div>
+<div class="card" onclick="openProfile('Matty','The Best members on Earth!')">Matty</div>
+<div class="card" onclick="openProfile('Purple','The Best members on Earth!')">Purple</div>
+
+</div>
+
+
+
+<div id="join" class="page">
+
+<h2 class="sectiontitle">Join The Clan</h2>
+
+<p>Become part of the TBS Gorilla Tag team.</p>
+
+<br>
+
+<a href="https://discord.gg/W6Cea4Ncfn" target="_blank">
+<button class="joinbtn">JOIN DISCORD</button>
+</a>
+
+</div>
+
+
+
+<div id="profile-popup" class="popup">
+
+<div class="popup-content">
+
+<h2 id="popup-name"></h2>
+
+<p id="popup-text"></p>
+
+<button class="close" onclick="closePopup()">Close</button>
+
+</div>
+
+</div>
+
+
+</body>
+</html>
